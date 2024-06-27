@@ -24,21 +24,6 @@ jobs:
           # !! Add your recipes here 
           - recipe.yml
     steps:
-    # I keep running out of spaceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-      - name: Remove unnecessary files
-        run: |
-          sudo rm -rf /usr/share/dotnet
-          sudo rm -rf "$AGENT_TOOLSDIRECTORY"
-      - uses: actions/checkout@v3
-      - uses: docker/setup-buildx-action@v2
-      - uses: docker/build-push-action@v4
-        with:
-          context: .
-          tags: my_tag:latest
-          load: true
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
         uses: blue-build/github-action@v1.6
