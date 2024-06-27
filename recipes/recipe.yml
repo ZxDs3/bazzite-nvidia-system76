@@ -23,9 +23,9 @@ modules:
     install:
       # - micro
       # - starship
-      system76-driver
-      system76-power
-      firmware-manager
+      - system76-driver
+      - system76-power
+      - firmware-manager
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -52,11 +52,11 @@ modules:
   - type: systemd
     system:
       enabled:
-        system76-firmware-daemon.service
-        com.system76.PowerDaemon.service 
-        system76-power-wake.service
+        - system76-firmware-daemon.service
+        - com.system76.PowerDaemon.service 
+        - system76-power-wake.service
       masked:
-        power-profiles-daemon.service
+        - power-profiles-daemon.service
   
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
