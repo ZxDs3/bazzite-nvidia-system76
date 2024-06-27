@@ -1,11 +1,11 @@
 # image will be published to ghcr.io/<user>/<name>
-name: template
+name: bazzite-nvidia-system76
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: Custom Bazzite image for System76 laptops with a nvidia GPU. 
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 40 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/bazzite-nvidia
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
