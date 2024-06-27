@@ -23,7 +23,7 @@ modules:
     install:
       # - micro
       # - starship
-      # - system76-driver
+      - system76-driver
       - system76-power
       - firmware-manager
     remove:
